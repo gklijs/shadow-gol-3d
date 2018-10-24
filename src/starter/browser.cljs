@@ -1,7 +1,9 @@
-(ns starter.browser)
+(ns starter.browser
+  (:require [gol.main :as gol]))
 
 ;; start is called by init and after code reloading finishes
 (defn ^:dev/after-load start []
+  (gol/tick)
   (js/console.log "start"))
 
 (defn ^:export init []
